@@ -10,7 +10,7 @@ export const contactInfo = [
     {
       icon: Mail,
       title: "Email Support",
-      details: "support@doconline.com",
+      details: "support@doc-online.com",
       subtext: "Online 24/7",
     },
     {

@@ -8,7 +8,7 @@ const Navbar = () => {
   const location = useLocation(); // Get the current location
 
   const menuItems = [
-    { label: "Home", href: "/" },
+    { label: "Home", href: "/doc-online" },
     { label: "About", href: "/about-us" },
     { label: "Services", href: "/services" },
     { label: "Contact", href: "/contact" },
@@ -23,14 +23,14 @@ const Navbar = () => {
       <div className="container mx-auto px-4 lg:px-20 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center h-10">
+          <Link to="/doc-online" className="flex items-center h-10">
             <img
-              src="/public/assets/doc-logo.png"
+              src="/doc-online/public/assets/doc-logo.png"
               className="w-full h-full"
               alt="Logo"
             />
             <img
-              src="/public/assets/dinisulogoword.png"
+              src="/doc-online/public/assets/dinisulogoword.png"
               className="w-full h-full"
               alt="Logo"
             />
