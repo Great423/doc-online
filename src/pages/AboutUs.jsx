@@ -98,50 +98,50 @@ const AboutUs = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center py-20 overflow-hidden">
+      <section className="relative min-h-screen flex items-center py-8 md:py-20 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gray-50 clip-diagonal" />
+        <div className="absolute top-0 right-0 w-0 md:w-1/2 h-full bg-gray-50 clip-diagonal" />
         
-        <div className="container mx-auto px-4 relative">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="container mx-auto px-4 lg:px-20 relative">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
             {/* Left Content */}
-            <div className="space-y-8 max-w-2xl">
-              <div className="space-y-4">
+            <div className="space-y-6 md:space-y-8 max-w-2xl order-2 lg:order-1">
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-2">
                   <div className="h-px w-8 bg-primary"/>
-                  <span className="text-primary font-medium">About Dinisu Clinic</span>
+                  <span className="text-primary font-medium text-sm md:text-base">About Dinisu Clinic</span>
                 </div>
-                <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   Who We <span className="text-primary">Are</span>
                 </h1>
               </div>
 
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
                 At Dinisu Clinic, we combine medical excellence with personalized care to ensure every patient receives the attention they deserve. With years of experience in general medicine, perioperative care, and health advocacy, our approach is holistic, addressing your physical, emotional, and overall well-being.
               </p>
 
-              <div className="space-y-6 bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg">
-                <h2 className="text-2xl font-bold text-gray-900">Our Philosophy</h2>
-                <p className="text-lg text-gray-600">
+              <div className="space-y-4 md:space-y-6 bg-white/80 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl shadow-lg">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-900">Our Philosophy</h2>
+                <p className="text-base md:text-lg text-gray-600">
                   We believe in empowering our patients through education and proactive health management. Whether you're preparing for surgery, managing a chronic condition, or seeking lifestyle improvements, we're here to guide you every step of the way.
                 </p>
               </div>
 
-              <div className="flex items-center gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 w-full sm:w-auto">
                   Book Appointment
                 </Button>
-                <Button variant="outline" size="lg" className="gap-2 group">
+                <Button variant="outline" size="lg" className="gap-2 group w-full sm:w-auto">
                   <Phone className="h-5 w-5 text-primary group-hover:text-primary/70" />
-                  <span className="text-primary group-hover:text-primary/70">+234 902 157 3173</span>
+                  <span className="text-primary group-hover:text-primary/70 text-sm md:text-base">+234 902 157 3173</span>
                 </Button>
               </div>
             </div>
 
             {/* Right Image */}
-            <div className="relative">
-              <div className="relative rounded-[2rem] overflow-hidden shadow-2xl aspect-[4/5]">
+            <div className="relative order-1 lg:order-2">
+              <div className="relative h-[35vh] md:h-[70vh] w-full rounded-xl md:rounded-[2rem] overflow-hidden shadow-xl md:shadow-2xl aspect-[4/5]">
                 <img 
                   src="/doc-online/assets/doctor-patient.jpg" 
                   className="h-full w-full object-cover transform scale-105 hover:scale-100 transition-transform duration-700"
@@ -151,15 +151,15 @@ const AboutUs = () => {
               </div>
               
               {/* Floating Stats Card */}
-              <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <p className="text-4xl font-bold text-primary">40+</p>
-                    <p className="text-sm text-gray-600">Years Experience</p>
+              <div className="absolute -bottom-4 md:-bottom-8 left-0 md:-left-8 bg-white p-4 md:p-6 rounded-tl-none rounded-xl md:rounded-2xl shadow-lg md:shadow-xl">
+                <div className="grid grid-cols-2 gap-4 md:gap-6">
+                  <div className="space-y-1 md:space-y-2">
+                    <p className="text-2xl md:text-4xl font-bold text-primary">40+</p>
+                    <p className="text-xs md:text-sm text-gray-600">Years Experience</p>
                   </div>
-                  <div className="space-y-2">
-                    <p className="text-4xl font-bold text-primary">24/7</p>
-                    <p className="text-sm text-gray-600">Virtual Visits</p>
+                  <div className="space-y-1 md:space-y-2">
+                    <p className="text-2xl md:text-4xl font-bold text-primary">24/7</p>
+                    <p className="text-xs md:text-sm text-gray-600">Virtual Visits</p>
                   </div>
                 </div>
               </div>
@@ -190,7 +190,7 @@ const AboutUs = () => {
 
       {/* Why Choose Us */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 lg:px-20">
           <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => {
@@ -212,127 +212,139 @@ const AboutUs = () => {
       </section>
 
       {/* Doctor Profile */}
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
-        <div className="container mx-auto px-4">
-          {/* Header */}
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
-              Meet Our Medical Team
-            </h2>
-            <p className="text-lg text-gray-600">
-              Our team of distinguished healthcare professionals brings together decades of experience 
-              and expertise to provide you with exceptional medical care.
-            </p>
-          </div>
+      <section className="py-12 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+      <div className="container mx-auto px-4 md:px-6 lg:px-20">
+        {/* Header */}
+        <div className="max-w-3xl mx-auto text-center mb-8 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
+            Meet Our Medical Team
+          </h2>
+          <p className="text-base md:text-lg text-gray-600 px-4">
+            Our team of distinguished healthcare professionals brings together decades of experience 
+            and expertise to provide you with exceptional medical care.
+          </p>
+        </div>
 
-          {/* CEO Feature */}
-          <div className="mb-20">
-            <Card className="overflow-hidden bg-white/50 backdrop-blur-sm border-none shadow-xl hover:shadow-2xl transition-all duration-300">
-              <div className="grid lg:grid-cols-5 gap-8">
-                <div className="lg:col-span-3 p-8 lg:p-12 flex flex-col justify-center">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="h-1 w-12 bg-primary rounded-full"></div>
-                    <span className="text-primary font-medium">Leadership</span>
-                  </div>
-                  
-                  <div className="space-y-6">
-                    <div>
-                      <h3 className="text-3xl font-bold mb-3">{doctors[0].name}</h3>
-                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-medium">
-                        <Award className="h-5 w-5" />
-                        {doctors[0].role}
-                      </div>
-                    </div>
+        {/* CEO Feature */}
+        <div className="mb-12 md:mb-20">
+          <Card className="overflow-hidden bg-white/50 backdrop-blur-sm border-none shadow-lg hover:shadow-xl transition-all duration-300">
+            <div className="grid lg:grid-cols-5 gap-6 md:gap-8">
+              {/* CEO Image for Mobile - Shows at top on mobile */}
+              <div className="lg:hidden relative h-[400px]">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent z-10"></div>
+                <img
+                  src={doctors[0].image}
+                  alt={doctors[0].name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
-                    <p className="text-gray-600 text-lg leading-relaxed">
-                      With over four decades of medical excellence, Dr. Odili leads our team with 
-                      unparalleled expertise and a vision for innovative healthcare solutions that 
-                      put patients first.
-                    </p>
-
-                    <div className="grid grid-cols-2 gap-6">
-                      <div className="space-y-4">
-                        <div className="flex items-center gap-3">
-                          <Users className="h-5 w-5 text-primary" />
-                          <span className="font-medium">{doctors[0].specialization}</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <Clock className="h-5 w-5 text-primary" />
-                          <span className="font-medium">{doctors[0].experience}</span>
-                        </div>
-                      </div>
-
-                      <div className="space-y-3 border-l pl-6">
-                        {doctors[0].education.map((edu, index) => (
-                          <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
-                            <ChevronRight className="h-4 w-4 text-primary flex-shrink-0" />
-                            <span>{edu}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+              {/* Content */}
+              <div className="lg:col-span-3 p-4 md:p-8 lg:p-12 flex flex-col justify-center">
+                <div className="flex items-center gap-3 mb-4 md:mb-6">
+                  <div className="h-1 w-12 bg-primary rounded-full"></div>
+                  <span className="text-primary font-medium text-sm md:text-base">Leadership</span>
                 </div>
+                
+                <div className="space-y-4 md:space-y-6">
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2 md:mb-3">{doctors[0].name}</h3>
+                    <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-primary/10 rounded-full text-primary font-medium text-sm md:text-base">
+                      <Award className="h-4 w-4 md:h-5 md:w-5" />
+                      {doctors[0].role}
+                    </div>
+                  </div>
 
-                <div className="lg:col-span-2 relative h-[30rem]">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent z-10"></div>
-                  <img
-                    src={doctors[0].image}
-                    alt={doctors[0].name}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute bottom-6 right-6 bg-white p-4 rounded-xl shadow-lg z-20">
-                    <div className="flex items-center gap-2">
-                      <Star className="h-5 w-5 text-yellow-400 fill-yellow-400" />
-                      <span className="font-bold">4.9</span>
-                      <span className="text-gray-600">(2000+ Reviews)</span>
+                  <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+                    With over four decades of medical excellence, Dr. Odili leads our team with 
+                    unparalleled expertise and a vision for innovative healthcare solutions that 
+                    put patients first.
+                  </p>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-3 md:space-y-4">
+                      <div className="flex items-center gap-3">
+                        <Users className="h-4 w-4 md:h-5 md:w-5 text-primary" />
+                        <span className="font-medium text-sm md:text-base">{doctors[0].specialization}</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <Clock className="h-4 w-4 md:h-5 md:w-5 text-primary" />
+                        <span className="font-medium text-sm md:text-base">{doctors[0].experience}</span>
+                      </div>
+                    </div>
+
+                    <div className="space-y-3 border-t md:border-t-0 md:border-l pt-3 md:pt-0 md:pl-6">
+                      {doctors[0].education.map((edu, index) => (
+                        <div key={index} className="flex items-center gap-2 text-xs md:text-sm text-gray-600">
+                          <ChevronRight className="h-3 w-3 md:h-4 md:w-4 text-primary flex-shrink-0" />
+                          <span>{edu}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
               </div>
-            </Card>
-          </div>
 
-          {/* Other Doctors Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {doctors.slice(1).map((doctor, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
-                <CardContent className="p-8">
-                  <div className="relative mb-8 aspect-square rounded-2xl overflow-hidden w-full h-[20rem] bg-gradient-to-br from-primary/5 to-primary/10">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Users className="w-24 h-24 text-primary/20" />
-                    </div>
+              {/* CEO Image for Desktop - Hidden on mobile */}
+              <div className="hidden lg:block lg:col-span-2 relative h-[30rem]">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent z-10"></div>
+                <img
+                  src={doctors[0].image}
+                  alt={doctors[0].name}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-6 right-6 bg-white p-3 md:p-4 rounded-lg md:rounded-xl shadow-lg z-20">
+                  <div className="flex items-center gap-2">
+                    <Star className="h-4 w-4 md:h-5 md:w-5 text-yellow-400 fill-yellow-400" />
+                    <span className="font-bold text-sm md:text-base">4.9</span>
+                    <span className="text-gray-600 text-xs md:text-sm">(2000+ Reviews)</span>
                   </div>
-                  
-                  <div className="space-y-4">
-                    <div>
-                      <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-                        {doctor.name}
-                      </h3>
-                      <p className="text-primary/80 font-medium">{doctor.role}</p>
-                    </div>
-
-                    <div className="pt-4 border-t space-y-3">
-                      <div className="flex items-center gap-3">
-                        <Users className="h-4 w-4 text-primary" />
-                        <span className="text-gray-600">{doctor.specialization}</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <Clock className="h-4 w-4 text-primary" />
-                        <span className="text-gray-600">{doctor.experience}</span>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                </div>
+              </div>
+            </div>
+          </Card>
         </div>
+
+        {/* Other Doctors Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {doctors.slice(1).map((doctor, index) => (
+            <Card key={index} className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <CardContent className="p-4 md:p-6 lg:p-8">
+                <div className="relative mb-6 md:mb-8 aspect-square rounded-xl md:rounded-2xl overflow-hidden w-full h-[16rem] md:h-[18rem] lg:h-[20rem] bg-gradient-to-br from-primary/5 to-primary/10">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Users className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 text-primary/20" />
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="text-lg md:text-xl font-bold mb-1 md:mb-2 group-hover:text-primary transition-colors">
+                      {doctor.name}
+                    </h3>
+                    <p className="text-primary/80 font-medium text-sm md:text-base">{doctor.role}</p>
+                  </div>
+
+                  <div className="pt-4 border-t space-y-3">
+                    <div className="flex items-center gap-2 md:gap-3">
+                      <Users className="h-4 w-4 text-primary" />
+                      <span className="text-gray-600 text-sm md:text-base">{doctor.specialization}</span>
+                    </div>
+                    <div className="flex items-center gap-2 md:gap-3">
+                      <Clock className="h-4 w-4 text-primary" />
+                      <span className="text-gray-600 text-sm md:text-base">{doctor.experience}</span>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
     </section>
 
       {/* Activities Gallery */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 lg:px-20">
           <h2 className="text-3xl font-bold text-center mb-12">Clinic Activities</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[

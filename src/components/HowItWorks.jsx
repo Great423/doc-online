@@ -47,18 +47,18 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-8 md:py-16 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-gray-900">
             How to Book Your Consultation
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto px-4">
             Follow these simple steps to schedule your appointment with our healthcare professionals
           </p>
         </div>
 
-        <div className="grid gap-8">
+        <div className="grid gap-6 md:gap-8">
           {steps.map((step, index) => (
             <div key={index} className="relative">
               {index !== steps.length - 1 && (
@@ -68,32 +68,32 @@ const HowItWorks = () => {
               )}
               
               <Card className="bg-white hover:shadow-lg transition-shadow duration-300">
-                <div className="p-6 flex gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center">
-                      <step.icon className="w-10 h-10 text-primary" />
+                <div className="p-4 md:p-6 flex flex-col md:flex-row gap-4 md:gap-6">
+                  <div className="flex-shrink-0 flex justify-center md:block">
+                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center">
+                      <step.icon className="w-8 h-8 md:w-10 md:h-10 text-primary" />
                     </div>
                   </div>
                   
                   <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
+                    <div className="flex flex-col md:flex-row items-center md:items-center gap-2 md:gap-3 mb-2">
                       <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
                         Step {index + 1}
                       </span>
-                      <h3 className="text-xl font-semibold text-gray-900">
+                      <h3 className="text-lg md:text-xl font-semibold text-gray-900 text-center md:text-left">
                         {step.title}
                       </h3>
                     </div>
                     
-                    <p className="text-gray-600 mb-4">
+                    <p className="text-sm md:text-base text-gray-600 mb-4 text-center md:text-left">
                       {step.description}
                     </p>
                     
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap justify-center md:justify-start gap-2 md:gap-3">
                       {step.keyPoints.map((point, idx) => (
                         <span 
                           key={idx}
-                          className="px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-sm"
+                          className="px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs md:text-sm"
                         >
                           {point}
                         </span>

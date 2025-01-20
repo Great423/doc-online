@@ -19,10 +19,10 @@ const App = () => {
       <Suspense fallback={<div className="loader text-center my-12 text-5xl font-semibold text-primary">Loading...</div>}>
         <Routes>
           <Route path="/doc-online" element={<Home />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/booking" element={<BookAppointment />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/doc-online/about-us" element={<AboutUs />} />
+          <Route path="/doc-online/booking" element={<BookAppointment />} />
+          <Route path="/doc-online/services" element={<Services />} />
+          <Route path="/doc-online/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

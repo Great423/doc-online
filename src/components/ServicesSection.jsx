@@ -106,7 +106,7 @@ export function ServicesSection() {
           className="w-full max-w-7xl mx-auto py-24"
         >
           <div className="max-w-2xl mx-auto text-center mb-8">
-            <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary mb-4">
               Comprehensive Medical Services
             </h2>
             <p className="text-gray-600 text-lg">
