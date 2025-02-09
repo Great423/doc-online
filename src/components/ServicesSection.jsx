@@ -168,7 +168,7 @@ export function ServicesSection() {
             })}
           </CarouselContent>
           <div className='w-full flex justify-center group'>
-            <Link to="/services">
+            <Link to="/doc-online/services">
               <Button size="lg" variant="outline" className="h-12 px-8 group-hover:text-primary">
                 View All Services
               </Button>

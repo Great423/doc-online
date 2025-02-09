@@ -106,21 +106,14 @@ const Testimonials = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <Button 
+          {/* <Button 
             variant="outline" 
             className="group"
             onClick={() => window.location.href = '/testimonials'}
           >
             Read More Testimonials
             <Quote className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-          </Button>
-          <Button 
-            className="group"
-            onClick={() => window.location.href = '/submit-testimonial'}
-          >
-            Submit Your Testimonial
-            <PenSquare className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-          </Button>
+          </Button> */}
         </motion.div>
       </div>
     </section>

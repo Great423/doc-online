@@ -226,7 +226,7 @@ const AboutUs = () => {
         </div>
 
         {/* CEO Feature */}
-        <div className="mb-12 md:mb-20">
+        <div className="">
           <Card className="overflow-hidden bg-white/50 backdrop-blur-sm border-none shadow-lg hover:shadow-xl transition-all duration-300">
             <div className="grid lg:grid-cols-5 gap-6 md:gap-8">
               {/* CEO Image for Mobile - Shows at top on mobile */}
@@ -306,7 +306,7 @@ const AboutUs = () => {
         </div>
 
         {/* Other Doctors Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {doctors.slice(1).map((doctor, index) => (
             <Card key={index} className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
               <CardContent className="p-4 md:p-6 lg:p-8">
@@ -338,12 +338,12 @@ const AboutUs = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
 
       {/* Activities Gallery */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 lg:px-20">
           <h2 className="text-3xl font-bold text-center mb-12">Clinic Activities</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -381,7 +381,7 @@ const AboutUs = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQs */}
       <section className="py-16 bg-white">

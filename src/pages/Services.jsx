@@ -42,7 +42,7 @@ const Services = () => {
       name: "Health Advocacy", 
       icon: UserCog,
       description: "Expert guidance in understanding diagnoses, medication management, and coordinated care with specialists for informed medical decisions.", 
-      category: 'support',
+      category: 'wellness',
       rating: 4.8,
       reviews: 156,
       waitTime: "1-2 days",
@@ -75,7 +75,7 @@ const Services = () => {
       name: "Patient Education", 
       icon: BookOpen,
       description: "Comprehensive education programs designed to empower patients with knowledge and understanding of their health conditions.", 
-      category: 'support',
+      category: 'medical',
       rating: 4.7,
       reviews: 92,
       waitTime: "Same day",
@@ -93,17 +93,17 @@ const Services = () => {
       bgColor: "bg-secondary",
       glowColor: "group-hover:shadow-secondary/25"
     },
-    { 
-      name: "Lifestyle Medicine", 
-      icon: Scale,
-      description: "Evidence-based lifestyle interventions to prevent, treat, and reverse chronic diseases through healthy behaviors.", 
-      category: 'wellness',
-      rating: 4.8,
-      reviews: 148,
-      waitTime: "2-3 days",
-      bgColor: "bg-primary",
-      glowColor: "group-hover:shadow-primary/25"
-    }
+    // { 
+    //   name: "Lifestyle Medicine", 
+    //   icon: Scale,
+    //   description: "Evidence-based lifestyle interventions to prevent, treat, and reverse chronic diseases through healthy behaviors.", 
+    //   category: 'wellness',
+    //   rating: 4.8,
+    //   reviews: 148,
+    //   waitTime: "2-3 days",
+    //   bgColor: "bg-primary",
+    //   glowColor: "group-hover:shadow-primary/25"
+    // }
   ];
 
   const filteredSpecialties = specialties

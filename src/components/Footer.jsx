@@ -19,20 +19,13 @@ import {
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-
   return (
     <footer className="bg-gray-50">
-      {/* Main Footer Content */}
       <div className="container mx-auto px-4 lg:px-20 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Company Info */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
-              <img
-                src="/doc-online/assets/doc-logo.png"
-                className="h-9 sm:h-12"
-                alt="Logo"
-              />
+              <img src="/doc-online/assets/doc-logo.png" className="h-9 sm:h-12" alt="Logo" />
               <span className="text-xl font-bold whitespace-nowrap dark:text-white">
                 Doc Online
               </span>
@@ -57,7 +50,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div className="space-y-4">
             <h4 className="text-xl font-semibold">Quick Links</h4>
             <div className="space-y-2 flex flex-col">
@@ -73,7 +65,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Contact Info */}
           <div className="space-y-4">
             <h4 className="text-xl font-semibold">Contact Us</h4>
             <ul className="space-y-3">
@@ -81,10 +72,17 @@ const Footer = () => {
                 <Mail className="h-4 w-4" />
                 support@Doc Online.com
               </li>
+              <li className="flex items-center gap-2 text-muted-foreground">
+                <Phone className="h-4 w-4" />
+                08143652750, 08123122953
+              </li>
+              <li className="flex items-start gap-2 text-muted-foreground">
+                <MapPin className="h-4 w-4 mt-1" />
+                <span>Dinisu Clinic, 6 KOHWO STREET, GRA, EFFURUN, Delta State, Nigeria</span>
+              </li>
             </ul>
           </div>
 
-          {/* We Accept */}
           <div className="space-y-4">
             <h4 className="text-xl font-semibold">We Accept</h4>
             <div className="grid grid-cols-2 gap-4">
@@ -93,10 +91,7 @@ const Footer = () => {
                 { icon: Shield, text: "Secure Payments" },
                 { icon: Clock, text: "24/7 Support" },
               ].map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-2 text-muted-foreground"
-                >
+                <div key={index} className="flex items-center gap-2 text-muted-foreground">
                   <item.icon className="h-4 w-4" />
                   <span className="text-sm">{item.text}</span>
                 </div>
@@ -105,26 +100,19 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="border-t mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} ⦁	Copyright 2025 Dinisu Clinic. All Rights Reserved.
+              © {new Date().getFullYear()} ⦁ Copyright 2025 Dinisu Clinic. All Rights Reserved.
             </p>
             <div className="flex gap-4">
               <Link to="/terms">
-                <Button
-                  variant="link"
-                  className="text-sm text-muted-foreground hover:text-primary"
-                >
+                <Button variant="link" className="text-sm text-muted-foreground hover:text-primary">
                   Privacy Policy
                 </Button>
               </Link>
               <Link to="/terms">
-                <Button
-                  variant="link"
-                  className="text-sm text-muted-foreground hover:text-primary"
-                >
+                <Button variant="link" className="text-sm text-muted-foreground hover:text-primary">
                   Terms of Service
                 </Button>
               </Link>

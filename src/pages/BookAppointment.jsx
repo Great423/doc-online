@@ -57,37 +57,43 @@ const BookAppointment = () => {
   };
 
   const services = {
-    'Neurology Consultation': { 
+    'General Medicine': { 
+      price: 200, 
+      duration: '45 mins',
+      description: 'Comprehensive health assessments, diagnosis and management of acute and chronic conditions, plus preventive care and wellness checks',
+      availability: 'Same day appointments available'
+    },
+    'Health Advocacy': { 
+      price: 150, 
+      duration: '60 mins',
+      description: 'Expert guidance in understanding diagnoses, medication management, and coordinated care with specialists for informed medical decisions',
+      availability: 'Available within 1-2 days'
+    },
+    'Anesthesia & Perioperative': { 
       price: 300, 
       duration: '60 mins',
-      description: 'Comprehensive evaluation and treatment of nervous system disorders',
-      availability: 'Appointments available within 1-2 weeks'
+      description: 'Complete perioperative care including preoperative evaluations, personalized anesthesia plans, and postoperative recovery guidance',
+      availability: 'By appointment only'
     },
-    'Ophthalmology Consultation': { 
-      price: 150, 
-      duration: '40 mins',
-      description: 'Eye examinations and treatment of vision-related issues',
-      availability: 'Same day appointments often available'
-    },
-    'Urology Consultation': { 
-      price: 200, 
-      duration: '50 mins',
-      description: 'Diagnosis and treatment of urinary tract and reproductive system issues',
-      availability: 'Available within 3-5 days'
-    },
-    'Orthopedic Consultation': { 
-      price: 250, 
+    'Health & Wellness Coaching': { 
+      price: 125, 
       duration: '45 mins',
-      description: 'Consultation for bone, joint, and muscle-related conditions',
-      availability: 'Typically available within a week'
+      description: 'Personalized lifestyle and dietary guidance, stress management techniques, and ongoing support for achieving your health goals',
+      availability: 'Available within 2-3 days'
     },
-    'Dermatology Consultation': { 
-      price: 180, 
+    'Patient Education': { 
+      price: 100, 
       duration: '30 mins',
-      description: 'Skin checkups and treatment for dermatological issues',
-      availability: 'Appointments available within 2-3 days'
+      description: 'Comprehensive education programs designed to empower patients with knowledge and understanding of their health conditions',
+      availability: 'Same day appointments available'
+    },
+    'Preventive Care': { 
+      price: 175, 
+      duration: '45 mins',
+      description: 'Proactive health maintenance through regular check-ups, screenings, and preventive wellness services',
+      availability: 'Available within 1-2 days'
     }
-  };  
+};
 
   const timeSlots = [
     { time: '09:00', available: true, slots: 3 },
