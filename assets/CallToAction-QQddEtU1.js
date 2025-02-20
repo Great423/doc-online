@@ -1,0 +1,6 @@
+import{c as a,j as t,L as e,B as s}from"./index-o7VpowNj.js";/**
+ * @license lucide-react v0.469.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const l=a("Star",[["path",{d:"M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z",key:"r04s7s"}]]),n=()=>t.jsxs("section",{className:"relative py-16 bg-primary/80 text-white",children:[t.jsx("img",{src:"/doc-online/assets/cta.jpg",className:"absolute top-0 -z-20 object-cover w-full h-full",alt:"cta"}),t.jsxs("div",{className:"container mx-auto px-4 text-center",children:[t.jsx("h2",{className:"text-3xl font-bold mb-6",children:"Be on Your Way to Feeling Better with Dinisu Clinic"}),t.jsx("p",{className:"mb-8 text-white/90",children:"Click that button and embark on a new chapter in your health story."}),t.jsx(e,{to:"/doc-online/booking",children:t.jsx(s,{variant:"outline",size:"lg",className:"bg-white hover:bg-white/90 text-primary",children:"Book an Appointment Now"})})]})]});export{n as C,l as S};
