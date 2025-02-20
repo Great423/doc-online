@@ -68,10 +68,12 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-xl font-semibold">Contact Us</h4>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-muted-foreground">
-                <Mail className="h-4 w-4" />
-                support@Doc Online.com
-              </li>
+              <a href="mailto:support@dinisuclinic.com">
+                <li className="flex items-center gap-2 text-muted-foreground">
+                  <Mail className="h-4 w-4" />
+                  support@dinisuclinic.com
+                </li>
+              </a>
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Phone className="h-4 w-4" />
                 08143652750, 08123122953

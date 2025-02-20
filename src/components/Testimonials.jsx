@@ -14,6 +14,12 @@ import {
 const Testimonials = () => {
   const testimonials = [
     {
+      content: "I was referred by Dinisu Clinic to an optician for my eye problem, and it was successful. This experience encouraged me to trust their platform for consultations and healthcare-related services.",
+      author: "Onyenokwe Great Chukwuka",
+      rating: 5,
+      type: "Consultation Patient"
+    },
+    {
       content: "Dr. Margaret truly listens and cares about my health concerns. Their expertise and compassion have made a real difference in my life.",
       author: "Sarah Johnson",
       rating: 5,

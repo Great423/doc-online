@@ -13,7 +13,7 @@ const CallToAction = () => {
             <p className="mb-8 text-white/90">
             Click that button and embark on a new chapter in your health story.
             </p>
-            <Link to="/booking">
+            <Link to="/doc-online/booking">
                 <Button variant="outline" size="lg" className="bg-white hover:bg-white/90 text-primary">
                     Book an Appointment Now
                 </Button>

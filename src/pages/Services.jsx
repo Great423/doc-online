@@ -2,22 +2,17 @@ import React, { useState } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
-  Stethoscope,
-  UserCog,
-  Syringe,
-  Heart,
-  BookOpen,
-  Activity,
-  Scale,
-  ArrowRight,
   Search,
-  Star
+  ChevronDown,
+  ChevronUp
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { specialties } from '@/constants';
 
 const Services = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [expandedCards, setExpandedCards] = useState({});
 
   const categories = [
     { id: 'all', name: 'All Services' },
@@ -26,85 +21,19 @@ const Services = () => {
     { id: 'wellness', name: 'Health & Wellness' }
   ];
 
-  const specialties = [
-    { 
-      name: "General Medicine", 
-      icon: Stethoscope,
-      description: "Comprehensive health assessments, diagnosis and management of acute and chronic conditions, plus preventive care and wellness checks.", 
-      category: 'medical',
-      rating: 4.9,
-      reviews: 245,
-      waitTime: "Same day",
-      bgColor: "bg-primary",
-      glowColor: "group-hover:shadow-primary/25"
-    },
-    { 
-      name: "Health Advocacy", 
-      icon: UserCog,
-      description: "Expert guidance in understanding diagnoses, medication management, and coordinated care with specialists for informed medical decisions.", 
-      category: 'wellness',
-      rating: 4.8,
-      reviews: 156,
-      waitTime: "1-2 days",
-      bgColor: "bg-secondary",
-      glowColor: "group-hover:shadow-secondary/25"
-    },
-    { 
-      name: "Anesthesia & Perioperative", 
-      icon: Syringe,
-      description: "Complete perioperative care including preoperative evaluations, personalized anesthesia plans, and postoperative recovery guidance.", 
-      category: 'medical',
-      rating: 4.9,
-      reviews: 128,
-      waitTime: "By appointment",
-      bgColor: "bg-primary",
-      glowColor: "group-hover:shadow-primary/25"
-    },
-    { 
-      name: "Health & Wellness Coaching", 
-      icon: Heart,
-      description: "Personalized lifestyle and dietary guidance, stress management techniques, and ongoing support for achieving your health goals.", 
-      category: 'wellness',
-      rating: 4.8,
-      reviews: 184,
-      waitTime: "2-3 days",
-      bgColor: "bg-secondary",
-      glowColor: "group-hover:shadow-secondary/25"
-    },
-    { 
-      name: "Patient Education", 
-      icon: BookOpen,
-      description: "Comprehensive education programs designed to empower patients with knowledge and understanding of their health conditions.", 
-      category: 'medical',
-      rating: 4.7,
-      reviews: 92,
-      waitTime: "Same day",
-      bgColor: "bg-primary",
-      glowColor: "group-hover:shadow-primary/25"
-    },
-    { 
-      name: "Preventive Care", 
-      icon: Activity,
-      description: "Proactive health maintenance through regular check-ups, screenings, and preventive wellness services.", 
-      category: 'medical',
-      rating: 4.9,
-      reviews: 216,
-      waitTime: "1-2 days",
-      bgColor: "bg-secondary",
-      glowColor: "group-hover:shadow-secondary/25"
-    },
-    // { 
-    //   name: "Lifestyle Medicine", 
-    //   icon: Scale,
-    //   description: "Evidence-based lifestyle interventions to prevent, treat, and reverse chronic diseases through healthy behaviors.", 
-    //   category: 'wellness',
-    //   rating: 4.8,
-    //   reviews: 148,
-    //   waitTime: "2-3 days",
-    //   bgColor: "bg-primary",
-    //   glowColor: "group-hover:shadow-primary/25"
-    // }
-  ];
+  const toggleCard = (index) => {
+    setExpandedCards(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
+  const truncateText = (text, expanded) => {
+    if (!expanded && text.length > 150) {
+      return text.substring(0, 150) + '...';
+    }
+    return text;
+  };
 
   const filteredSpecialties = specialties
     .filter(specialty => {
@@ -177,13 +106,19 @@ const Services = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredSpecialties.map((specialty, index) => {
                 const Icon = specialty.icon;
+                const isExpanded = expandedCards[index];
+                
                 return (
-                  <Card key={index} className={cn(
-                    "group h-full bg-white",
-                    "transition-all duration-500 ease-out",
-                    "hover:shadow-2xl hover:scale-[1.02]",
-                    specialty.glowColor
-                  )}>
+                  <Card 
+                    key={index} 
+                    className={cn(
+                      "group h-full bg-white cursor-pointer",
+                      "transition-all duration-500 ease-out",
+                      "hover:shadow-2xl hover:scale-[1.02]",
+                      specialty.glowColor
+                    )}
+                    onClick={() => toggleCard(index)}
+                  >
                     <CardContent className="p-6 md:p-8">
                       <div className="flex flex-col h-full space-y-6">
                         <div className="flex justify-between items-start">
@@ -196,11 +131,11 @@ const Services = () => {
                           )}>
                             <Icon className="w-8 h-8 text-primary" />
                           </div>
-                          <div className="flex items-center space-x-1">
-                            <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                            <span className="text-gray-700 font-medium">{specialty.rating}</span>
-                            <span className="text-gray-400">({specialty.reviews})</span>
-                          </div>
+                          {isExpanded ? (
+                            <ChevronUp className="w-6 h-6 text-gray-400" />
+                          ) : (
+                            <ChevronDown className="w-6 h-6 text-gray-400" />
+                          )}
                         </div>
 
                         <div className="flex-grow space-y-3">
@@ -208,22 +143,8 @@ const Services = () => {
                             {specialty.name}
                           </h3>
                           <p className="text-gray-600">
-                            {specialty.description}
+                            {truncateText(specialty.description, isExpanded)}
                           </p>
-                        </div>
-
-                        <div className="space-y-4">
-                          <div className="flex justify-between text-sm">
-                            <span className="text-gray-500">Average wait time</span>
-                            <span className="text-gray-900 font-medium">{specialty.waitTime}</span>
-                          </div>
-                          
-                          <Button
-                            className="w-full group/button bg-primary hover:bg-primary/90"
-                          >
-                            <span className="font-medium">Learn More</span>
-                            <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover/button:translate-x-1" />
-                          </Button>
                         </div>
                       </div>
                     </CardContent>

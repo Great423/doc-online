@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator"
 import { ArrowRight, Award, ScrollText, Search, Calendar, Stethoscope, ClipboardCheck, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -31,12 +32,16 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="h-12 px-8">
-                Schedule Appointment
-              </Button>
-              <Button size="lg" variant="outline" className="h-12 px-8">
-                View Services
-              </Button>
+              <Link to="/doc-online/booking">
+                <Button size="lg" className="h-12 px-8">
+                  Schedule Appointment
+                </Button>
+              </Link>
+              <Link to="/doc-online/services">
+                <Button size="lg" variant="outline" className="h-12 px-8">
+                  View Services
+                </Button>
+              </Link>
             </div>
           </motion.div>
 

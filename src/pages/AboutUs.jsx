@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Play, Phone, Clock, Award, Users, Heart, ChevronRight, Star } from 'lucide-react';
 import CallToAction from '@/components/CallToAction';
+import { Link } from 'react-router-dom';
 
 const AboutUs = () => {
   const features = [
@@ -129,12 +130,15 @@ const AboutUs = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 w-full sm:w-auto">
-                  Book Appointment
-                </Button>
+                <Link to="/doc-online/booking">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 w-full sm:w-auto">
+                    Book Appointment
+                  </Button>
+                </Link>
                 <Button variant="outline" size="lg" className="gap-2 group w-full sm:w-auto">
                   <Phone className="h-5 w-5 text-primary group-hover:text-primary/70" />
-                  <span className="text-primary group-hover:text-primary/70 text-sm md:text-base">+234 902 157 3173</span>
+                  {/* <span className="text-primary group-hover:text-primary/70 text-sm md:text-base">+234 902 157 3173</span> */}
+                  <span className="text-primary group-hover:text-primary/70 text-sm md:text-base">+234 814 365 2750</span>
                 </Button>
               </div>
             </div>
